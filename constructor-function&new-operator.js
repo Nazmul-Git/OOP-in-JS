@@ -35,11 +35,19 @@ console.log(jonas); //Person { fName: 'jonas', bYear: 1990 }
 
 // Each and every functions in js automatically has a property called prototype that includes constructor functions. Every object that created by a certain constructor function will get access all the methods and properties that we defined on the constructions property.
 
-console.log(Person.prototype);
+console.log(Person.prototype); //{constructor: ƒ}
 
 Person.prototype.calAge = function(){
     console.log(2024- this.bYear); //34
 };
 jonas.calAge(); //34
 console.log(jonas); //Person { fName: 'jonas', bYear: 1990 }
-// Jonas does not contain callAge method 
+// Jonas do not contain callAge method 
+
+sunny.calAge(); //26
+console.log(sunny); //Person { fName: 'sunny', bYear: 1998 }
+// sunny do not contain callAge method 
+
+// NOTE:Create a new person jonas and by using prototype (that include constructor function) create calAge method to calculate jonas age, but actually jonas or sunny  function do not contain this calAge method.But calAge method added in Person constructor.
+
+console.log(Person.prototype); //{calAge: ƒ, constructor: ƒ}
