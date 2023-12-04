@@ -28,4 +28,18 @@ const jonas= new Person('jonas', 1990);
 console.log(jonas); //Person { fName: 'jonas', bYear: 1990 }
 
 // HERE, sunny and jonas are instance of Person.
-console.log(jonas instanceof Person); //true
+// console.log(jonas instanceof Person); //true
+
+// ////////////////////////////////////////////////////
+// PROTOTYPE
+
+// Each and every functions in js automatically has a property called prototype that includes constructor functions. Every object that created by a certain constructor function will get access all the methods and properties that we defined on the constructions property.
+
+console.log(Person.prototype);
+
+Person.prototype.calAge = function(){
+    console.log(2024- this.bYear); //34
+};
+jonas.calAge(); //34
+console.log(jonas); //Person { fName: 'jonas', bYear: 1990 }
+// Jonas does not contain callAge method 
