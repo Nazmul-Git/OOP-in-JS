@@ -1,4 +1,4 @@
-
+// Here Person is a blueprint 
 const Person=function(firstName, birthYear){
     // console.log(this); //Person {}
     this.fName= firstName;
@@ -15,3 +15,6 @@ console.log(sunny); //Person { fName: 'sunny', bYear: 1998 }
 // 2. Function is called, this = {}
 // 3. {} linked to prototype
 // 4. Function automatically return {}
+
+const jonas= new Person('jonas', 1990);
+console.log(jonas); //Person { fName: 'jonas', bYear: 1990 }
