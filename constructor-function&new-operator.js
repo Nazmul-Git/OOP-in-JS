@@ -51,3 +51,8 @@ console.log(sunny); //Person { fName: 'sunny', bYear: 1998 }
 // NOTE:Create a new person jonas and by using prototype (that include constructor function) create calAge method to calculate jonas age, but actually jonas or sunny  function do not contain this calAge method.But calAge method added in Person constructor.
 
 console.log(Person.prototype); //{calAge: ƒ, constructor: ƒ}
+
+// also add property
+Person.prototype.gender= 'Male';
+console.log(jonas.gender); //Male
+console.log(sunny.gender); //Male
