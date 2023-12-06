@@ -84,3 +84,17 @@ console.log(sunny.__proto__);
 console.log(sunny.__proto__.__proto__); 
 //{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
 console.log(sunny.__proto__.__proto__.__proto__);//null
+
+// NOTE: sunny.__proto__ contain all method & sunny.__proto__.__proto__ contain constructor & sunny.__proto__.__proto__.__proto__ contain null value.
+
+console.log(Person.prototype.constructor);
+/**
+ ƒ (firstName, birthYear){
+    // console.log(this); //Person {}
+
+    // instances properties
+    this.fName= firstName;
+    this.bYear= birthYear;
+
+    // NEVER USE A METHOD IN CONSTRUCTOR FUNCTION..
+ */
