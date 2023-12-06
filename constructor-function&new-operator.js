@@ -162,6 +162,8 @@ const h1= document.querySelector('h1');
 console.log(h1); // <h1>OOP</h1>
 /**
  * 
+h1
+ 
 hidden: false
 id: ""
 inert: false
@@ -174,6 +176,7 @@ onclick: null
 onclose: null
 ........
 ........
+// constructor function
 [[Prototype]]: HTMLHeadingElement
 align: (...)
 constructor: ƒ HTMLHeadingElement()
@@ -183,4 +186,34 @@ ariaAtomic: (...)
 ..........
 
 
+ */
+
+console.dir(x=>x+1);
+
+/**
+ anonymous()
+length: 1
+name: ""
+arguments: (...)
+caller: (...)
+[[FunctionLocation]]: constructor-function&new-operator.js:191
+[[Prototype]]: ƒ ()
+apply: ƒ apply()
+arguments: (...)
+bind: ƒ bind()
+call: ƒ call()
+caller: (...)
+constructor: ƒ Function()
+length: 0
+name: ""
+toString: ƒ toString()
+Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()
+get arguments: ƒ ()
+set arguments: ƒ ()
+get caller: ƒ ()
+set caller: ƒ ()
+[[FunctionLocation]]: 
+[[Prototype]]: Object
+[[Scopes]]: Scopes[0]
+[[Scopes]]: Scopes[2]
  */
