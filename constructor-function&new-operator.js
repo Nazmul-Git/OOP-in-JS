@@ -68,7 +68,13 @@ console.log(sunny.gender); //Male
 // [[Prototype]]: Object
 console.log(sunny);
 
-// .prototypeOfLinkedObjects
 console.log(sunny.__proto__); //{gender: 'Male', calAge: ƒ, constructor: ƒ}
 console.log(sunny.__proto__ === Person.prototype); // true
 console.log(Person.prototype.isPrototypeOf(sunny)); // true
+
+// .prototypeOfLinkedObjects
+Person.prototype.species = 'Homo Sapiens';
+console.log(sunny.species);
+
+console.log(sunny.hasOwnProperty('fName')); //true , this keyword create fName property of sunny.
+console.log(sunny.hasOwnProperty('species'));//false bcz,species property not stay in sunny object. Stay into prototype.
