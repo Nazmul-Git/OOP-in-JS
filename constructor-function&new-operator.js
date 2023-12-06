@@ -101,8 +101,9 @@ console.log(Person.prototype.constructor);
 
 
 
-    // /////////////////////
-    const arr=[1,5,3,7,8,9,46,3,10];
+    // //////////Prototype and constructor of given arr ///////////
+
+    const arr=[1,5,3,3,3,7,8,9,46,3,10]; //If we need create array then , new Array
     console.log(arr.__proto__);
 
     /**
@@ -134,3 +135,24 @@ join: ƒ join()
 : 
 Object
      */
+
+console.log(arr.__proto__ === Array.prototype); //true
+console.log(arr.__proto__.__proto__);
+/**
+ {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+ */
+
+ // arr.__proto__ /prototype  is an object and an object can access all the methods like, constructor, hasOwnProperty, isPrototypeOf etc.
+
+
+
+/////////////////////////// OVERVIEW ///////////////
+// Array.prototype.filter()
+// here Array is a constructor function
+// prototype is an object and contain all the array methods
+
+// FOR EXAMPLE
+Array.prototype.unique= function(){
+    return [...new Set(this)];
+};
+console.log(arr.unique()); //[1, 5, 3, 7, 8, 9, 46, 10]
