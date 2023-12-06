@@ -78,3 +78,9 @@ console.log(sunny.species);
 
 console.log(sunny.hasOwnProperty('fName')); //true , this keyword create fName property of sunny.
 console.log(sunny.hasOwnProperty('species'));//false bcz,species property not stay in sunny object. Stay into prototype.
+
+console.log(sunny.__proto__); 
+//{gender: 'Male', species: 'Homo Sapiens', calAge: ƒ, constructor: ƒ}
+console.log(sunny.__proto__.__proto__); 
+//{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+console.log(sunny.__proto__.__proto__.__proto__);//null
