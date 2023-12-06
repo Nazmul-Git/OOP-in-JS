@@ -156,3 +156,31 @@ Array.prototype.unique= function(){
     return [...new Set(this)];
 };
 console.log(arr.unique()); //[1, 5, 3, 7, 8, 9, 46, 10]
+
+//  into dom
+const h1= document.querySelector('h1');
+console.log(h1); // <h1>OOP</h1>
+/**
+ * 
+hidden: false
+id: ""
+inert: false
+innerHTML: "OOP"
+innerText: "OOP"
+oncanplay: null
+oncanplaythrough: null
+onchange: null
+onclick: null
+onclose: null
+........
+........
+[[Prototype]]: HTMLHeadingElement
+align: (...)
+constructor: ƒ HTMLHeadingElement()
+Symbol(Symbol.toStringTag): "HTMLHeadingElement"
+accessKey: (...)
+ariaAtomic: (...)
+..........
+
+
+ */
