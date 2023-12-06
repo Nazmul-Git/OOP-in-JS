@@ -37,6 +37,7 @@ console.log(jonas); //Person { fName: 'jonas', bYear: 1990 }
 
 console.log(Person.prototype); //{constructor: ƒ}
 
+// add a method
 Person.prototype.calAge = function(){
     console.log(2024- this.bYear); //34
 };
@@ -56,3 +57,18 @@ console.log(Person.prototype); //{calAge: ƒ, constructor: ƒ}
 Person.prototype.gender= 'Male';
 console.log(jonas.gender); //Male
 console.log(sunny.gender); //Male
+
+// sunny 
+// bYear: 1998
+// fName: "sunny"
+// [[Prototype]]: Object
+// calAge: ƒ ()
+// gender: "Male"
+// constructor:ƒ (firstName, birthYear)
+// [[Prototype]]: Object
+console.log(sunny);
+
+// .prototypeOfLinkedObjects
+console.log(sunny.__proto__); //{gender: 'Male', calAge: ƒ, constructor: ƒ}
+console.log(sunny.__proto__ === Person.prototype); // true
+console.log(Person.prototype.isPrototypeOf(sunny)); // true
