@@ -98,3 +98,39 @@ console.log(Person.prototype.constructor);
 
     // NEVER USE A METHOD IN CONSTRUCTOR FUNCTION..
  */
+
+
+
+    // /////////////////////
+    const arr=[1,5,3,7,8,9,46,3,10];
+    console.log(arr.__proto__);
+
+    /**
+     * 
+     * WE CAN SEE PROTOTYPE/__proto__ ,  contain all array method for arr.
+     [constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …]
+at: ƒ at()
+concat: ƒ concat()
+constructor: ƒ Array()
+copyWithin: ƒ copyWithin()
+entries: ƒ entries()
+every: ƒ every()
+fill: ƒ fill()
+filter: ƒ filter()
+find: ƒ find()
+findIndex: ƒ findIndex()
+findLast: ƒ findLast()
+findLastIndex: ƒ findLastIndex()
+flat: ƒ flat()
+flatMap: ƒ flatMap()
+forEach: ƒ forEach()
+includes: ƒ includes()
+indexOf: ƒ indexOf()
+join: ƒ join()
+.......
+.........
+...........
+[[Prototype]]
+: 
+Object
+     */
