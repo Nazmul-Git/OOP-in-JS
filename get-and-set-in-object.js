@@ -12,3 +12,5 @@ const account ={
 console.log(account.latest); //300
 account.latest=50;
 console.log(account.movements); // [ 500, 145, 155, 266, 300, 50 ]
+
+

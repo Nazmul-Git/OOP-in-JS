@@ -6,6 +6,7 @@
 // }
 
 // Function declaration
+// here, ES6 classes.. PersonClass contains constructor function and prototype/all methods & property.
 class PersonClass {
   constructor(fullName, birthYear) {
     this.fullName = fullName;
@@ -49,3 +50,7 @@ console.log(javaScript);
     _fullName: "Java Script"
 
  */
+
+// 1. Classes are not hoisted.
+// 2. Classes are first-class citizen
+// 3. Classes are executed in strict mode
