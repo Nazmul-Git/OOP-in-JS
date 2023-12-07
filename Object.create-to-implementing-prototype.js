@@ -25,7 +25,10 @@ console.log(sunny.__proto__);
  */
 
 
-//////////////// Manually assigning name & birthYear convert into a function /////////////////
+//////////////// Manually assigning Object.create method name & birthYear convert into a function /////////////////
 const javaScript= Object.create(PersonProto);
 javaScript.init('Brendan Eich',1995 );
 javaScript.calAge(); //29
+
+
+// NOTE: Object.create() - create a new object and a prototype of that object  will be the object pass in.
