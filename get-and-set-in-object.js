@@ -3,7 +3,7 @@ const account ={
     movements: [500,145,155,266,300],
 
     get latest(){
-        return this.movements.slice(-1).pop();
+        return this.movements.slice(-1).pop(); //get something thats why return
     },
     set latest(mov){
         this.movements.push(mov);
