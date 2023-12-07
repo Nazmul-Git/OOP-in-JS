@@ -24,7 +24,11 @@ const bmw= new Car('BMW', 120);
 const mercedes= new Car('Mercedes', 95);
 
 bmw.accelerateMethod();
-mercedes.accelerateMethod();
-
+bmw.accelerateMethod();
 bmw.breakMethod();
+bmw.accelerateMethod();
+
+mercedes.accelerateMethod();
+mercedes.accelerateMethod();
+mercedes.accelerateMethod();
 mercedes.breakMethod();
