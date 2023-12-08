@@ -15,6 +15,8 @@ const Student= function(name, birthYear, dept){
     Person.call(this, name, birthYear); //Inherit person parent class from student class -> Person.call(this keyword for newly created object, name, birthYear)
     this.dept= dept;
 };
+// linking prototype
+Student.prototype= Object.create(Person.prototype);
 
 Student.prototype.introduceStudent= function(){
     console.log(`My name is ${this.name} and my department is ${this.dept}`);
@@ -24,3 +26,4 @@ Student.prototype.introduceStudent= function(){
 // create object
 const sunny= new Student('Sunny', 1998, 'CSE');
 sunny.introduceStudent();
+sunny.calAge(); 
