@@ -10,5 +10,7 @@ Person.prototype.calAge= function(){
 };
 
 const Student= function(name, birthYear, dept){
-    
-}
+    this.name= name;
+    this.birthYear= birthYear;
+    this.dept= dept;
+};
