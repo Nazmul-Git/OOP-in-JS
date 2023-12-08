@@ -27,3 +27,24 @@ Student.prototype.introduceStudent= function(){
 const sunny= new Student('Sunny', 1998, 'CSE');
 sunny.introduceStudent();
 sunny.calAge(); 
+
+//How to work sunny.callAge() =>
+/*
+
+/////////////////  PROTOTYPE CHAINING  /////////////////////
+  1. callAge not directly in sunny object and  also not in sunny's prototype. Here get, Student.prototype.
+
+  2. Now js try to find in immediate parent class Student.But can't find here. Here get Person.prototype.
+  
+  3. Similarly, Student class try to find callAge function into hi parent class Person. Finally get this calAge method into Person.prototype ba person er prototype er moddhe.
+*/ 
+
+
+console.log(sunny.__proto__); //Person {introduceStudent: ƒ}
+console.log(sunny.__proto__.__proto__); //{calAge: ƒ, constructor: ƒ}
+
+Student.prototype.constructor=Student;
+console.dir(Student.prototype.constructor);// ƒ Student(name, birthYear, dept)
+
+console.log(sunny instanceof Student); //true
+console.log(sunny instanceof Person);  //true
