@@ -24,4 +24,4 @@ bmw.accelerateMethod();
 
 bmw.breakMethod();
 bmw.speedUs=50;
-console.log(bmw)
+console.log(bmw);
