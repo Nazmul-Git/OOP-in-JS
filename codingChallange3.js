@@ -21,7 +21,7 @@ EV.prototype.chargeBattery=function(chargeTo){
     this.charge=chargeTo;
 };
 
-// If we comment accelerateMethod inside EV's prototype then tesla.accelerateMethod(); inherit on the accelerateMethod() which in the Car's prototype.
+// If we comment accelerateMethod inside EV's prototype then tesla.accelerateMethod(); inherit on the accelerateMethod() which in the- Car's/parent prototype.Always inherit the nearest parent if they have similar method or property.That is polymorphism.
 EV.prototype.accelerateMethod= function(){
     this.speed += 20;
     this.charge --;

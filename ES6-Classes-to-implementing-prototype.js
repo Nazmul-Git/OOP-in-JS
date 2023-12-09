@@ -30,6 +30,11 @@ class PersonClass {
     if(name.includes(' ')) this._fullName=name;
     else alert(`${name} is not a full name !`); 
   }
+
+  // STATIC METHOD
+  static hey(){
+    console.log('hey there..');
+  }
 }
 
 const sunny = new PersonClass("Sunny", 1998);
@@ -54,3 +59,13 @@ console.log(javaScript);
 // 1. Classes are not hoisted.
 // 2. Classes are first-class citizen
 // 3. Classes are executed in strict mode
+
+//////////////////////// /////////////////////////////////
+
+class StudentClass extends PersonClass {
+  constructor(fullName, birthYear, dept){
+    // always needs to happen first
+    super(fullName, birthYear); // super is the constructor function of parent class
+    this.dept=dept;
+  };
+};

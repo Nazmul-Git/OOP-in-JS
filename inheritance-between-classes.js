@@ -1,4 +1,5 @@
 
+
 // INHERITANCE BETWEEN CLASSES
 const Person= function(name, birthYear){
     this.name= name;
@@ -48,3 +49,9 @@ console.dir(Student.prototype.constructor);// ƒ Student(name, birthYear, dept)
 
 console.log(sunny instanceof Student); //true
 console.log(sunny instanceof Person);  //true
+
+
+
+
+
+
