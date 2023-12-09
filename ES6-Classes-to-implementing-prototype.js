@@ -72,7 +72,7 @@ class StudentClass extends PersonClass {
   };
 
   introduce(){
-    console.log(`My name is ${this.fullName} and i am study ${this.dept}`);
+    console.log(`My name is ${this._fullName} and i am study ${this.dept}`);
   };
 
   calAge(){
