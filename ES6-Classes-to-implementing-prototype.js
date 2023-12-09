@@ -74,7 +74,9 @@ class StudentClass extends PersonClass {
     console.log(`My name is ${this.fullName} and i am study ${this.dept}`);
   };
 
+
 };
 
 const saiful= new StudentClass('Saiful Islam', 1999, 'EEE');
 saiful.introduce(); 
+saiful.calAge();
