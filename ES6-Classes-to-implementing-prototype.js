@@ -75,9 +75,17 @@ class StudentClass extends PersonClass {
     console.log(`My name is ${this.fullName} and i am study ${this.dept}`);
   };
 
+  calAge(){
+    console.log(`i am ${2024-this.birthYear} years old, but as a student i feel more like ${2024-this.birthYear + 10 }`)
+  }
+
 
 };
 
 const saiful= new StudentClass('Saiful Islam', 1999, 'EEE');
 saiful.introduce(); 
-saiful.calAge();
+saiful.calAge(); //If we comment calAge in class function then saiful object inherit calAge which have in parent class and get output 25 otherwise calAge inherit calAge which in student class and use calAge() here little bit modified get output i am 25 years old, but as a student i feel more like 35. 
+
+//  SO we can say inherit nearest parent and use a method into child class with modifying/polymorphism.
+
+
