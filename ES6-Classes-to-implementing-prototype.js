@@ -37,18 +37,18 @@ class PersonClass {
   }
 }
 
-const sunny = new PersonClass("Sunny", 1998);
-sunny.calAge();
-sunny.message();
-console.log(sunny.age);
+// const sunny = new PersonClass("Sunny", 1998);
+// sunny.calAge();
+// sunny.message();
+// console.log(sunny.age);
 
-const siam = new PersonClass("Siam", 2006);
-siam.calAge();
-siam.message();
+// const siam = new PersonClass("Siam", 2006);
+// siam.calAge();
+// siam.message();
 
-const javaScript= new PersonClass('Java Script', 2000);
-console.log(javaScript.age);
-console.log(javaScript);
+// const javaScript= new PersonClass('Java Script', 2000);
+// console.log(javaScript.age);
+// console.log(javaScript);
 /**
  PersonClass {_fullName: 'Java Script', birthYear: 2000}
     birthYear: 2000
@@ -62,10 +62,19 @@ console.log(javaScript);
 
 //////////////////////// /////////////////////////////////
 
+// create a child class 
 class StudentClass extends PersonClass {
   constructor(fullName, birthYear, dept){
     // always needs to happen first
     super(fullName, birthYear); // super is the constructor function of parent class
     this.dept=dept;
   };
+
+  introduce(){
+    console.log(`My name is ${this.fullName} and i am study ${this.dept}`);
+  };
+
 };
+
+const saiful= new StudentClass('Saiful Islam', 1999, 'EEE');
+saiful.introduce(); 
