@@ -63,6 +63,7 @@ class PersonClass {
 //////////////////////// /////////////////////////////////
 
 // create a child class 
+// prototype chain automatically create by use extend 
 class StudentClass extends PersonClass {
   constructor(fullName, birthYear, dept){
     // always needs to happen first
