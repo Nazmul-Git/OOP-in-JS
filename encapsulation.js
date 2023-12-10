@@ -4,11 +4,12 @@ class Account {
 
     // private field
     #movements=[];
+    #pin;
 
     constructor(owner, currency, pin){
         this.owner= owner;
         this.currency=currency;
-        this._pin=pin;
+        this.#pin=pin;
         // this._movements=[];
         // this.local=navigator.language;
         console.log(`Thanks for opening a new account, ${this.owner}`)
@@ -49,4 +50,9 @@ acc1.requestLoan(1000)
 acc1._approveLoan(1000)
 console.log(acc1);
 console.log(acc1.getMovements());
+
+// Can not access private field
+
 // console.log(acc1.#movements);//Uncaught SyntaxError: Private field '#movements' must be declared in an enclosing class
+
+// console.log(acc1.#pin);//Uncaught SyntaxError: Private field '#pin' must be declared in an enclosing class
