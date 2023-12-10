@@ -34,6 +34,7 @@ const PersonProto = {
 
 // inherit PersonProto
 const StudentProto = Object.create(PersonProto);
+// inherit init method and use it by my own modification.It's called polymorphism .
 StudentProto.init = function (name, birthYear, dept) {
     PersonProto.init.call(this, name, birthYear);
     this.dept= dept;
@@ -47,4 +48,4 @@ siam.calAge(); //18
 siam.introduce(); //My name is Siam and I study science
 
 
-// summery: New object inherit PersonProto/parent and have stored into StudentProto , another new object inherit StudentProto.
+// summery: New object inherit PersonProto/parent and have stored into StudentProto , another new object inherit StudentProto. Object link to other object
