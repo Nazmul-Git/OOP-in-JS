@@ -17,6 +17,8 @@ class Account {
 
     // Implement more methods, each method can access other methods outside class.
 
+
+
     // Public Interface
     getMovements(){
         return this.#movements;
@@ -24,21 +26,31 @@ class Account {
 
     deposit(val){
         this.#movements.push(val);
+        return this;
     }
 
     withdraw(val){
-        this.deposit(-val)
+        this.deposit(-val);
+        return this;
     }
     
-    _approveLoan(val){
-        return true
-    }
+    
 
     requestLoan(val){
         if(this._approveLoan(val)){
             this.deposit(val);
-            console.log('Loan Approved')
+            console.log('Loan Approved');
+            return this;
         }
+    }
+
+    static helper(){
+        console.log('Helper')
+    }
+
+    // private method
+    _approveLoan(val){
+        return true
     }
 
 };
@@ -56,3 +68,8 @@ console.log(acc1.getMovements());
 // console.log(acc1.#movements);//Uncaught SyntaxError: Private field '#movements' must be declared in an enclosing class
 
 // console.log(acc1.#pin);//Uncaught SyntaxError: Private field '#pin' must be declared in an enclosing class
+
+Account.helper();
+// Chaining
+acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
+console.log(acc1.getMovements());
