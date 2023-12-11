@@ -24,10 +24,10 @@ class CarClass {
 
 
 class EVcl extends CarClass{
-    #charge;
+    #charge; // # means private a property or method
 
     constructor(make, speed, charge){
-        super(make, speed);
+        super(make, speed);//super for call the carClass constructor function
         this.#charge= charge;
     }
 
@@ -50,5 +50,5 @@ class EVcl extends CarClass{
 //   console.log(bmw.#charge);//Uncaught SyntaxError: Private field '#charge' must be declared in an enclosing class
   bmw.accelerateMethod().accelerateMethod().accelerateMethod().breakMethod().chargeBattery(50).accelerateMethod();
 
-  console.log(bmw.speedUs);
+  console.log(bmw.speedUs); 
   
